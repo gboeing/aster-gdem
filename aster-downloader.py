@@ -59,7 +59,7 @@ def get_filepath(url):
 # In[ ]:
 
 
-urls = pd.read_csv(urls_path).iloc[:,0].sort_values()
+urls = pd.read_csv(urls_path, header=None).iloc[:,0].sort_values()
 print(ox.ts(), 'there are', len(urls), 'urls to get')
 
 session = login(urls[0])
